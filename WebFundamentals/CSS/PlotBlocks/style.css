@@ -19,7 +19,7 @@
  width: 200px;
  background-color: blue;
  display: inline-block;
- vertical-align: top;
+ vertical-align: top; /*align items by their top not by their bottom*/
 }
 #main_content{
  height: 400px;
