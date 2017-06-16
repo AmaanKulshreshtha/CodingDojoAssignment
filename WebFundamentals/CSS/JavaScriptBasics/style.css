@@ -1,12 +1,16 @@
 body{
-  background-color:  blue;
+  background-color:  #143770;
 }
 
 header,aside,main,footer{
-  outline: 2px dashed black;
+  /*outline: 2px dashed black;*/
+  font-family: monospace; /* change font type*/
+  border-radius: 20px; /* round border , bigger the value, rounder the border*/
 }
 
 header{
+  font-weight: bold; /*weight define style*/
+  font-size: 2em; /*1em = default size = 16px , 2em= 32px*/
   background-color: red;
   padding: 10px;
 }
@@ -15,21 +19,32 @@ aside,main{
   display: inline-block;
   padding: 1%; /*use percentage to be responsive*/
   /*overflow: scroll; /*when window size too small create scroll*/
+  margin-top: 10px;
 
 }  /*This did not work originally because
 the initial width of main and aside were too wide
 to fit into one block */
 
 main{
-  width: 50% /*cut original width by half */
+  width: 69%; /*show it as % of original width, use this to shrink width of content*/
+  background-color: black;
+  color: white;
 }
 
 aside{
-  width: 25% /*cut off 75%*/
+  width: 25%; /*cut off 75%*/
   vertical-align: top;
-  background-color: #39EDCA;
+  background-color: #41a392;
 }
 
-aside{
-  hover:
+a {
+  color: #61cc88;
+  text-decoration: none;  /*This removes the underline from link tag*/
+}
+
+footer{
+  margin-top: 10px;
+
+  background-color: grey;
+  padding: 1%;
 }
