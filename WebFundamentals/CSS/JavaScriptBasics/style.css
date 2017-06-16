@@ -1,0 +1,35 @@
+body{
+  background-color:  blue;
+}
+
+header,aside,main,footer{
+  outline: 2px dashed black;
+}
+
+header{
+  background-color: red;
+  padding: 10px;
+}
+
+aside,main{
+  display: inline-block;
+  padding: 1%; /*use percentage to be responsive*/
+  /*overflow: scroll; /*when window size too small create scroll*/
+
+}  /*This did not work originally because
+the initial width of main and aside were too wide
+to fit into one block */
+
+main{
+  width: 50% /*cut original width by half */
+}
+
+aside{
+  width: 25% /*cut off 75%*/
+  vertical-align: top;
+  background-color: #39EDCA;
+}
+
+aside{
+  hover:
+}
