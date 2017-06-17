@@ -1,0 +1,97 @@
+body{
+
+}
+
+header,main,footer{
+ border: 1px dashed black;
+}
+
+header{
+  background-color: #c6cad1;
+}
+
+header > h2{
+  margin-left: 15px;
+  margin-right: 65%;
+}
+
+header > h2 , header > p{
+  display: inline-block;
+  /*width: 50%;*/
+}
+
+header > p{
+  font-weight: bold;
+  font-size: large;
+}
+
+introduction > content{
+  background-color: #cabad6;
+}
+
+introduction > img {
+  width: 30%;
+  height: 30%;
+  margin: 15px;
+  display: inline-block;
+  vertical-align: top;
+  border-style: solid;
+  border-color: #969ca5;
+  border-width: thick;
+}
+
+introduction > h3 {
+  height: 40px;
+  width: 65%;
+  padding-top:15px;
+  padding-left: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #afbcd1;
+  display: inline-block;
+}
+
+
+/*#about{
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#about > h3{
+  height: 40px;
+  padding-top:15px;
+  padding-left: 5px;
+  background-color: #afbcd1;
+}*/
+
+introduction > #about > content {
+
+}
+
+main{
+
+}
+
+
+.application{
+  display: inline-block;
+  width: 30%;
+}
+
+.application > img{
+  width: 20%;
+  height: 20%;
+}
+aside,main{
+/*use percentage to be responsive*/
+  /*overflow: scroll; /*when window size too small create scroll*/
+
+}  /*This did not work originally because
+the initial width of main and aside were too wide
+to fit into one block */
+
+.techicons > img{
+  width: 10%;
+  height: 10%;
+}
