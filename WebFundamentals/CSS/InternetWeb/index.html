@@ -8,23 +8,76 @@
     <link rel="stylesheet" type="text/css" href="style.css">
    </head>
    <body>
-        <header>
-          <img src="img.png" alt="">
-          <h1>The Internet</h1>
+      <section>
+        <header id="site-header">
+          <img src="images\globe.png" alt="notfound.png">
+          <h1>The Inter<span>net</span> </h1>
           <h2>The World Wide Web</h2>
         </header>
 
         <aside>
-              <div id>
-
-              </div>
+           <div id="call-to-action">
+             <h5>So, what's an Internet?</h5>
+             <p>An interconnected Network of computers all around the world!</p>
+             <button>Watch A video</button>
+             <button>More Resources</button>
+           </div>
+           <div id="advertisement">
+             <img src="images\ad_background.png" alt="notfound.png">
+             <img src="images\ninja.png" alt="notfound.png">
+             <h3>Reinvent your career in just 14 weeks</h3>
+             <button>Learn more >>></button>
+           </div>
         </aside>
+
         <main>
+            <header>
+              <img src="images\home.png" alt="notfound.png">
+              <a href="#">DNS</a>
+              <div id="contact-info">
+                <img src="images\phone.png" alt="notfound.png">
+                <div>
+                  <p>Mon - Fri 9a.m. - 5p.m.(EST)</p>
+                  <h3>855.967.3787</h3>
+                  <p>International +1.617.963.855 5</p>
+                </div>
+              </div>
+            </header>
 
+            <article>
+              <h3>Clients and Servers</h3>
+              <p>Computers connected to the web are called clients</p>
+              <ul>
+                <li>Clients are the typical Web user's Internet-connected devices
+                (for example, your computer connected to your Wi-Fi), or your phone connected to your mobile network)
+                and <span>Web-accessing software</span> available on those devices (usually a web browser like Firefox or Chrome).</li>
+                <li><span>Servers</span> are computers that store <span>webpages</span>, <span>sites</span>, or <span>apps</span>.</li>
+              </ul>
+              <img src="images\client_server.jpg" alt="notfound.png">
+              <h3>So What Actually Happens</h3>
+              <ol>
+                <li>The browser goes to the <span>DNS server</span></li>
+                <li>The browser sends an <span>HTTP request</span> messages to the server asking it to send a copy...</li>
+                <li>if the server approves the client's request, the server sends the client a <span>"200 OK" message</span>,
+                which means Permission granted! Here you go!</li>
+                <li>The browser assembles the small chunks into a complete website and displays it to you!</li>
+              </ol>
+
+              <footer>
+                <img src="images\html.png" alt="notfound.png">
+                <div >
+                  <h3>The Big 3 - HTML, CSS< JavaScript</h3>
+                  <p>While the server can process information in many different languages,
+                    files that they serve to the client are always going to be some combination of
+                    HTML, CSS, and JavaScript!
+                  </p>
+                  <p>Learn more about the Big 3 <a href="#">here!</a></p>
+                </div>
+              </footer>
+
+            </article>
         </main>
-
-        <footer>For more useful info, check out this URL: <a href="mdn.org">JavaScript!</a></footer>
-
+      </section>
 
    </body>
 </html>

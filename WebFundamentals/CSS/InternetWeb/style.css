@@ -1,35 +1,149 @@
-body{
-  background-color:  blue;
+section{
+   width: 80%;
+   margin: auto;
+   font-family: sans-serif;
 }
 
-header,aside,main,footer{
-  outline: 2px dashed black;
-}
+#site-header{
+  line-height: 100%;
 
-header{
-  background-color: red;
-  padding: 10px;
 }
+    header > img{
+      height:100px;
+      width: 100px;
+      display: inline-block;
+      margin-bottom: -25px;
+      /*bring image down to text internet*/
+    }
 
-aside,main{
+    header > h1 {
+      display: inline-block;
+      font-size: 2.5em;
+    }
+    header > h1 > span {
+        color: #326EA2;
+      }
+
+    header > h2 {
+      background-color: #326EA2;
+      color: white;
+      padding:15px;
+      margin-top: 0; /*remove space between internet and world wide web*/
+    }
+
+aside {
   display: inline-block;
-  padding: 1%; /*use percentage to be responsive*/
-  /*overflow: scroll; /*when window size too small create scroll*/
-
-}  /*This did not work originally because
-the initial width of main and aside were too wide
-to fit into one block */
-
-main{
-  width: 50% /*cut original width by half */
-}
-
-aside{
-  width: 25% /*cut off 75%*/
+  width: 15%;
   vertical-align: top;
-  background-color: #39EDCA;
+  margin-right: 20px;
 }
 
-aside{
-  hover:
+  #call-to-action {
+    width: 78%;
+    border-bottom: 1px solid silver;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+
+  #call-to-action > button {
+    margin-left: 20px;
+    margin-bottom: 5px;
+  }
+
+  /*select the img element that is
+  the first child of the parent (advertisement)*/
+  #advertisement img:first-child {
+    width: 100%;
+    height: 350px;
+  }
+
+  /*select the img that is the 2nd child of advertisement*/
+  #advertisement img:nth-child(2) {
+    width: 60%;
+    margin-left: 18%;
+    margin-top: -280px; /*this moves ninja in front of background.png*/
+
+  }
+
+  #advertisement > h3 {
+    margin-top: -300px; /*this moves reinvent career up*/
+    color: white;
+    margin-left: 10px;
+    padding: 5px;
+  }
+
+  #advertisement > button {
+    margin-top: 200px;
+    margin-left: 50px;
+  }
+
+main {
+  display: inline-block;
+  width: 80%;
 }
+
+main > header {
+  padding-bottom: 50px;
+  position: relative;
+  border-bottom: 1px solid gray;
+ }
+main > header > img {
+  vertical-align: top;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+}
+
+#contact-info {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+
+#contact-info > div > h3 {
+  margin: 0;  /*This remove the space between Mon - Fri and phone number*/
+}
+
+#contact-info > div > p {
+  margin: 0;  /*this also removes space between lines in contact-info*/
+}
+
+#contact-info > img {
+  vertical-align: top;
+  margin-top: 20px;
+  width: 25px;
+  height: 20px;
+  display: inline-block;
+}
+
+#contact-info > div {
+   display: inline-block;
+}
+
+main > article {
+
+}
+
+main > article > h3{
+  color: #326EA2;
+}
+
+main > article > img {
+  height: 75px;
+  width: 200px;
+}
+
+footer {
+  border: 5px solid #326EA2;
+}
+
+  footer > img {
+    display: inline-block;
+    height: 100px;
+    width: 85px;
+  }
+
+  footer > div {
+    display: inline-block;
+    width: 80%;
+  }
