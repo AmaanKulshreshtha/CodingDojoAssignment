@@ -1,14 +1,16 @@
 header,main,footer{
- border: 1px dashed black;
+
 }
 
 header{
-  background-color: #c6cad1;
+  background-color: #F4F4F4;
 }
 
 header > h2{
   margin-left: 15px;
   margin-right: 65%;
+  font-family: cursive;
+  font-size: 35px;
 }
 
 header > h2 , header > p{
@@ -18,11 +20,12 @@ header > h2 , header > p{
 
 header > p{
   font-weight: bold;
-  font-size: large;
+  font-size: 30px;
+
 }
 
 introduction {
-  background-color: #8041a3;
+  /*background-color: #8041a3;*/
 }
 
 introduction > img {
@@ -40,16 +43,17 @@ introduction > content > h3 {
   height: 45px;
   margin: 0; /*remove the gap between title and edit of content*/
   padding-left: 10px;
-  padding-top:25px;
+  padding-top:20px;
   color: white;
   font-weight: bold;
-  background-color: #afbcd1;
+  font-size: 22px;
+  background: linear-gradient(grey,white);
   /*display: inline-block;*/
 }
 
 introduction > content {
-  width: 62%;
-  max-height: 50;
+  width: 50%;
+  height: 450px;
   margin: 15px;
   padding-bottom : 10px;
   display: inline-block;
@@ -57,59 +61,118 @@ introduction > content {
 }
 
 introduction > content > p , a{
-  padding-left: 10px;
+  width: 70%;
+  padding-left: 10%;
   padding-bottom : 5px;
+  font-size: 25px;
+  color: black;
 }
+
 
 main{
   height:50%;
-
-  display: inline-block;
+  display: flex;
+  justify-content: space-around;
 }
 
 .application{
   /*height: 200px;*/
   width: 30%;
   vertical-align: top;
-  padding-left: 15px;
-  display: inline-block;
+  border: 1px solid;
+  /*display: inline-block;*/
 }
 
 
 .application > h3{
-  height: 30px;
-  margin-top: 10px;
+  height: 50px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 10px;
+  padding-top: 15px;
   color: white;
   font-weight: bold;
-  background-color: #afbcd1;
-  border: 1px dashed black;
+  font-size: 22px;
+  background: linear-gradient(grey,white);
+  /*background-color: #afbcd1;*/
+
 }
 
 .application > img{
   max-width: 100%;
   max-height: 100%;
-  border: 1px dashed black;
+  margin-top: 0;
 }
 
 .application > p{
-  /*height: 20px;*/
-  margin-bottom: 10px;
+  font-family: sans-serif;
+  font-size: 18px;
+  height: 155px;
+  width: 70%;
+  padding-left: 20%;
+  padding-top: 5px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0px;
 }
 
-aside,main{
-/*use percentage to be responsive*/
-  /*overflow: scroll; /*when window size too small create scroll*/
 
-}  /*This did not work originally because
-the initial width of main and aside were too wide
-to fit into one block */
+.techicons {
+  width: 60%;
+  height: 100px;
+  display: inline-block;
+  margin-left: 20%;
+  margin-bottom: 12%;
+  padding: 10px;
+  /*display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: center;*/
+
+}
 
 .techicons > img{
-  width: 30px;
-  height: 30px;
-}
-
-
-footer{
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
   margin-top: 10px;
 }
+
+.techicons > button {
+  width: 200px;
+  margin-top: 10px;
+  margin-left: 20%;
+  border-radius: 10px;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  background-color: #407D61;
+  padding: 5px;
+  -webkit-box-shadow: 4px 4px 5px #222;
+  box-shadow: 4px 4px 5px #222;
+}
+
+#brief {
+  display: block;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 1px 1px grey;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .contact > img {
+    width: 30px;
+    height: 30px;
+  }
+  .contact > p {
+    max-width: 70%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
