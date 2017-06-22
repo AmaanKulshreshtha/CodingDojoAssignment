@@ -1,0 +1,121 @@
+section {
+    background-image: radial-gradient(circle, #6F5964, #6F5964, #ffffff);
+    padding: 10px;
+}
+
+.cool-background {
+    background-image: linear-gradient(90deg, white, #DCCFDC);
+    /*padding: 1%;*/
+    /*background-color: black;*/
+}
+
+header {
+    background-color: #F8F8F8;
+    position: relative;
+    padding: 2px 10px 2px 10px;
+}
+
+    header > h1 {
+        font-family: sans-serif;
+        font-size: 2em;
+    }
+
+    header > h3 {
+        position: absolute;
+        right: 25px;
+        top: 0;
+        font-size: 1.5em;
+    }
+
+summary {
+
+}
+
+    summary > img {
+        display: inline-block;
+        width: 40%;
+        height: auto;
+        border: 5px solid white;
+    }
+
+    summary > aside {
+        width: 50%;
+        margin-left: 5%;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+main > article {
+    width: 30%;
+    margin: 1%;
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 10px;
+}
+
+    .article-header {
+        background-image: linear-gradient(white, gray, white);
+        padding: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 0px;
+        color: white;
+    }
+
+    article > img {
+        width: 100%;
+        height: auto;
+    }
+
+    article > p {
+        height: 150px;
+        overflow: scroll;
+        margin-left: 1%;
+        margin-left: 1%;
+    }
+
+    .article-icons {
+        text-align: left;
+    }
+
+        .article-icons img {
+            height: 50px;
+            width: 50px;
+            padding: 2px;
+        }
+
+    .center-button {
+        text-align: center;
+    }
+
+    .center-button button {
+        border: none;
+        background-color: green;
+        color: white;
+        border-radius: 5px;
+        padding: 2px;
+    }
+
+
+footer {
+    padding-top: 10px;
+    background-color: #F8F8F8;
+}
+
+    footer p {
+        margin-top: 0px;
+        text-align: center;
+    }
+
+    .links {
+        text-align: center;
+    }
+
+        .single-link {
+            display: inline-block;
+        }
+
+        .single-link img {
+            height: 20px;
+            width: 20px;
+        }
