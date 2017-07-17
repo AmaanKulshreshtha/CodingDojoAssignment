@@ -1,0 +1,8 @@
+#wrapper {
+    margin: 20px;
+    display: inline-block;
+}
+#wrapper > form {
+    width: 40%;
+    height: 50%;
+}

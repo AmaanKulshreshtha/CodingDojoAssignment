@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Session Cart Demo</title>
+       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+      <div class="container">
+        <header class="row">
+          <ul>
+            <li>Home</li>
+            <li>My Account</li>
+            <li>Contact Us</li>
+            <li>Help</li>
+            <li>Cart ( {{ session['cart'] | length }} )</li>
+          </ul>
+        </header>
+        <main>
+          <ul>
+            {% for product in products %}
+            <li>{{ product['name'] }}</li>
+            <li> $ {{ product['price'] }}</li>
+            {% endfor %}
+          </ul>
+        </main>
+      </div>
+    </body>
+</html>
