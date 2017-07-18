@@ -1,8 +1,22 @@
+body > input {
+margin-bottom: 10px;
+}
+
 #wrapper {
     margin: 20px;
-    display: inline-block;
 }
 #wrapper > form {
-    width: 40%;
+    text-align:center;
+    width: 20%;
     height: 50%;
+    display: inline-block;
+    margin-right:15px;
+    margin-bottom:15px;
+    padding-bottom:10px;
+    border: 2px solid black;
+}
+
+body > textarea {
+  width: 400px;
+  height: 400px;
 }
