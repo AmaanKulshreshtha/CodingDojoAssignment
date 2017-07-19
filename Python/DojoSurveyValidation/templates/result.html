@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Dojo Survey Result With Validation </title>
+      <!-- linking a javascript file -->
+      <script type="text/javascript" src="{{ url_for('static', filename='jquery-3.2.1.min.js') }}"></script>
+      <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+  </head>
+  <body>
+     <h2>Submitted Info</h2>
+       <p>Name:       {{ name }}</p>
+       <p>Dojo Location:   {{ location }}</p>
+       <p>Favorite Language:   {{ language }}</p>
+       <p>Comment:  {{ comment }}</p>
+      <button id="back">Go Back</button>
+  </body>
+</html>
