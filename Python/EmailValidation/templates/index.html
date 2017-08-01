@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Dojo Email Validation Assignment</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+     <h1>Welcome Come To Email Validation!</h1>
+    <!-- now the below part is customized on the client side, so that
+     user can see the flash message during validation process-->
+     {% with messages = get_flashed_messages() %}
+        {% if messages %}   <!--If the message is not empty -->
+          {% for message in messages %}
+            <p>{{ message }}</p>
+          {% endfor %}
+        {% endif %}
+     {% endwith %}
+     <form action='/process' method='POST'>
+           Email Address:  <input type="text" name="email">
+           <br>
+           <input type="submit" name="Submit">
+     </form>
+  </body>
+</html>

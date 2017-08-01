@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Email Validation Success </title>
+      <!-- linking a javascript file -->
+  </head>
+  <body>
+       <p>The email you entered {{ email }} is a VALID email address! Thank you!</p>
+       <br>
+       <br>
+       <span style="text-decoration: underline">Email Address Entered: </span>
+        {% for email in all_emails: %}
+          <p>{{email['email_address']}}   {{ email['created_at']}} </p>
+          <hr>
+        {% endfor %}
+      <form action='/process' method='POST'>
+          <input type="submit" name="Delete">
+
+      </form>
+  </body>
+</html>
