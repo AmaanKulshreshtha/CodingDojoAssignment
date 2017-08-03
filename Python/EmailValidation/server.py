@@ -50,4 +50,14 @@ def process():
         # rendering the page directly with values obtained from form
         return render_template('result.html',email=request.form['email'],all_emails=emails)
 
+
+# for delete record
+@app.route('/remove',methods=['POST'])
+def remove():
+    query = "DELETE FROM emails WHERE email_address = :email"
+    data = {
+        'email':request.form['email']
+    }
+    mysql.query_db(query,data)
+    return redirect('/')
 app.run(debug=True)   #  run your application in debug mode

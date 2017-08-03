@@ -5,6 +5,7 @@
       <!-- linking a javascript file -->
   </head>
   <body>
+
        <p>The email you entered {{ email }} is a VALID email address! Thank you!</p>
        <br>
        <br>
@@ -13,9 +14,10 @@
           <p>{{email['email_address']}}   {{ email['created_at']}} </p>
           <hr>
         {% endfor %}
-      <form action='/process' method='POST'>
-          <input type="submit" name="Delete">
 
+      <form action='/remove' method='POST'>
+          Email Address:  <input type="text" name="email">
+      <button type="submit" name="DELETE">DELETE</button>
       </form>
   </body>
 </html>
