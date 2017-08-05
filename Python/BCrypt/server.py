@@ -1,7 +1,8 @@
 from flask import Flask, request, redirect, render_template, session, flash
 from mysqlconnection import MySQLConnector
-
+from flask_bcrypt import Bcrypt
 app = Flask(__name__)
+bcrypt = Bcrypt()
 mysql = MySQLConnector(app,'friendsdb')
 
 @app.route('/')

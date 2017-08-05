@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Encrpt Password</title>
+</head>
+<body>
+    <h2>Encrpt Passwords</h2>
+    <form action="/users/create" method="POST">
+        <label for="email">Email:<input type="text" name="email"  value="{{email}}"></label>
+        <label for="last_name">Last Name:<input type="text" name="last_name"  value="{{last_name}}"></label>
+        <label for="password">Password:<input type="text" name="password"  value="{{password}}"></label>
+        <button type="submit" name="button">Create</button>
+    </form>
+</body>
+</html>
