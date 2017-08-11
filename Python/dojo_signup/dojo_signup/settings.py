@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'apps.online'  # to include the online app in our installed app
+    'apps.online',  # to include the online app in our installed app
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

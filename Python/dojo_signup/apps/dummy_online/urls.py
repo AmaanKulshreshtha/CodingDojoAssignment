@@ -1,6 +1,5 @@
-"""dojo_signup URL Configuration
-
-MASTER URL FILE
+"""online URL Configuration
+This should handle requests received
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -16,10 +15,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
-from django.contrib import admin
+from .import views   # from the current directory import views.py
 
 urlpatterns = [
-    url(r'^',include('apps.online.urls')),
-    # for any route is  r'^', sent it to apps.online.url
-    url(r'^programinfo$',include('apps.online.urls')),
+    url(r'^$',views.index),    # any route is  r'^',  r'^$' is route ('/')
 ]

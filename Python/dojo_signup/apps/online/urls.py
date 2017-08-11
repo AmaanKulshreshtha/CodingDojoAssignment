@@ -18,5 +18,7 @@ from django.conf.urls import url, include
 from .import views   # from the current directory import views.py
 
 urlpatterns = [
-    url(r'^$',views.index),    # any route is  r'^',  r'^$' is route ('/')
+    url(r'^$',views.index),    # any route is  r'^',  r'^$' is route ('/'), the function that handle / is in views called index
+    url(r'^programinfo$',views.programinfo), # route for '/programinfo' , sent it to function programinfo under views
+    url(r'^process',views.process)  # route for '/process', sent request to function process
 ]
