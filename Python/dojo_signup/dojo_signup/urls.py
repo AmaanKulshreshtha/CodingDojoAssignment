@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^',include('apps.online.urls')),
     # for any route is  r'^', sent it to apps.online.url
     url(r'^programinfo$',include('apps.online.urls')),
+    # route like /programinfo,  sent it to apps.online.urls
 ]

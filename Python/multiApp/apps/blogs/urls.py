@@ -13,11 +13,18 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url,include
-
+from django.conf.urls import url
+from . import views
 urlpatterns = [
-    url(r'^blogs$', include('apps.blogs.urls')),  # /blogs request go to blogs app
+    url(r'^$', views.index),  # / route
 
-    url(r'^surveys$', include('apps.surveys.urls')),  # /surveys request go to surveys app
+    url(r'^new$', views.new),  #/blogs/new
 
+    url(r'^create$', views.create),  #/blogs/create
+
+    url(r'^(?P<number>\d+)$', views.show),# a placeholder called number, that can pass to method
+
+    url(r'^(?P<number>\d+)/edit$', views.edit), # edit
+
+    url(r'^(?P<number>\d+)/delete$', views.destroy), # destroy
 ]
