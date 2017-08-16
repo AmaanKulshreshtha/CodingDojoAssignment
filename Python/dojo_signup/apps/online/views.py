@@ -15,9 +15,9 @@ def programinfo(request):
 
 
 def process(request):
-    print request.POST
+    print request.POST # for debug
     robot = False
-    if request.POST['robot'] == 'on':  # if checkbox is checked
+    if request.GET['robot'] == 'on':  # if checkbox is checked
         robot = True
     User.objects.create(
         name = request.POST['name'],
