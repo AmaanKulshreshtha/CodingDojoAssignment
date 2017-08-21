@@ -1,4 +1,4 @@
-"""multiApp URL Configuration
+"""FormDjango URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -13,18 +13,9 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
-from . import views
+from django.conf.urls import url,include
+
+
 urlpatterns = [
-    url(r'^$', views.index),  # / route
-
-    url(r'^/new$', views.new),  #/blogs/new
-
-    url(r'^/create$', views.create),  #/blogs/create
-
-    url(r'^/(?P<number>\d+)$', views.show),# a placeholder called number, that can pass to method
-
-    url(r'^/(?P<number>\d+)/edit$', views.edit), # edit
-
-    url(r'^/(?P<number>\d+)/delete$', views.destroy), # destroy
+    url(r'^', include('apps.logreg.urls'))
 ]

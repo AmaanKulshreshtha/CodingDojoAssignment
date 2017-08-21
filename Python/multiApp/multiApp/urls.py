@@ -16,8 +16,10 @@ Including another URLconf
 from django.conf.urls import url,include
 
 urlpatterns = [
-    url(r'^blogs$', include('apps.blogs.urls')),  # /blogs request go to blogs app
+    url(r'^blogs', include('apps.blogs.urls')),  # /blogs request go to blogs app
 
-    url(r'^surveys$', include('apps.surveys.urls')),  # /surveys request go to surveys app
+    url(r'^surveys', include('apps.surveys.urls')),  # /surveys request go to surveys app
+
+    url(r'^users', include('apps.users.urls'))  # /users request go to
 
 ]

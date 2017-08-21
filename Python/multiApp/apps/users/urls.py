@@ -1,4 +1,4 @@
-"""multiApp URL Configuration
+"""Users App URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -16,15 +16,11 @@ Including another URLconf
 from django.conf.urls import url
 from . import views
 urlpatterns = [
-    url(r'^$', views.index),  # / route
 
-    url(r'^/new$', views.new),  #/blogs/new
+    url(r'^/register$', views.register),
 
-    url(r'^/create$', views.create),  #/blogs/create
+    url(r'^/login$', views.login),
 
-    url(r'^/(?P<number>\d+)$', views.show),# a placeholder called number, that can pass to method
-
-    url(r'^/(?P<number>\d+)/edit$', views.edit), # edit
-
-    url(r'^/(?P<number>\d+)/delete$', views.destroy), # destroy
+    url(r'^/user/new$', views.register),# a placeholder called number, that can pass to method
 ]
+__author__ = 'blackhat'

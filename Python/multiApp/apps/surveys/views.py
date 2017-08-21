@@ -1,6 +1,16 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
+"""
+Surveys\Views.py handle all request to \blogs
+"""
 
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse, redirect
 
-# Create your views here.
+
+# the index function is called when root is visited
+def index(request):
+    response = "placeholder to later display all the surveys created"
+    return HttpResponse(response)
+
+
+def new(request):
+    response = "placeholder for users to add a new survey"
+    return HttpResponse(response)
