@@ -1,0 +1,30 @@
+<html>
+    <head>
+       <title>Great Number Game</title>
+    </head>
+    <body>
+      <h1>Welcome to the Great Number Game!</h1>
+      <p>I am thinking of a number between 1 and 100 ({{ session['target'] }}) </p>
+      <p>Take a guess!</p>
+
+      <!-- read on to learn about form actions, we'll talk about the method in a later section -->
+      <form action='/users' method='post'>
+          <input type='number' name='guess'>
+          <input type='submit' value='Guess'>
+      </form>
+
+      <form>
+          {% if session['message'] == 'Too High' %}
+              <h1>You're High!</h1>
+          {% elif session['message'] == 'Too Low' %}
+              <h1>You're Low!</h1>
+          {% elif session['message'] == 'correct'%}
+              <h1>You're correct!</h1>
+              <form action="/winner" method='post'>
+                <input type="submit" value="Play Again">
+              </form>
+          {% endif %}
+      </form>
+
+    </body>
+</html>

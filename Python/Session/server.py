@@ -3,8 +3,8 @@ from flask import Flask, render_template,request,redirect,session
 Flask() allow you to create the app, render_template is used to render user.html
 """
 app = Flask(__name__)
+app.secret_key = "secretKey" # this concerns security
 
-app.secret_key = "ThisMustBeSuperSecret" # this concerns security
 @app.route('/')
 def index():
     return render_template("index.html")
