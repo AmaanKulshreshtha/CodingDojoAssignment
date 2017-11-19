@@ -1,0 +1,23 @@
+ function appendList(array, id){
+        // append array items as li tags
+        let target = document.getElementById(id);
+        for (var i=0 ;i<array.length;i++){
+          var new_list = document.createElement("li");
+          new_list.innerHTML = array[i];
+          target.appendChild(new_list);
+        }
+    };
+    let students = ["Jeff", "Jenny", "Javier", "Joslyn", "Joe", "Jane", "Django"];
+    let target_id = "main";
+    appendList(students, target_id);
+
+
+ function appendList(array,element,id){
+        // append array items as li tags
+        let target = document.getElementById(id);
+        for (var i=0 ;i<array.length;i++){
+          var new_list = document.createElement(element);
+          new_list.innerHTML = array[i];
+          target.appendChild(new_list);
+        }
+    };

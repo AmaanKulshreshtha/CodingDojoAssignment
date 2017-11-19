@@ -1,0 +1,19 @@
+function zero_negativity(_arr){
+  for (var i=0;i<_arr.length;i++){
+  if(_arr[i]<0) return false;
+  }
+  return true;
+}
+
+function create_dummy_array(n){
+   var arr = [];
+   for (var i=0;i<n;i++){
+   arr.push(Math.floor(Math.random()*10));
+   }
+   return arr;
+}
+
+function random_choice(_arr){
+   var choice = Math.floor(Math.random()*_arr.length);
+   return _arr[choice];
+}
