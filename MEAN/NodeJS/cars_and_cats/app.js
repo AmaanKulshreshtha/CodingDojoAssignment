@@ -28,7 +28,7 @@ var server = http.createServer(function (request,response){
         response.end();
       });
     }
-    else if(request.url==='/cats.html'){ // we need to do this because
+    else if(request.url==='/cats'){ // we need to do this because
       // the style.css is actually stored on our server
       fs.readFile('./views/cats.html','utf8',function(errors,contents){
         console.log('started processing dojos...');
@@ -39,7 +39,7 @@ var server = http.createServer(function (request,response){
       });
     }
 
-	//route for images
+//route for images
 	else if(request.url==='/images/accord.jpg'){
 		fs.readFile('./images/accord.jpg',function(erros,contents){
 			response.writeHead(200,{'Content-type':'image/jpg'});
@@ -48,10 +48,62 @@ var server = http.createServer(function (request,response){
 		});
 	}
 
+  else if(request.url==='/images/gtr2017.jpg'){
+    fs.readFile('./images/gtr2017.jpg',function(erros,contents){
+      response.writeHead(200,{'Content-type':'image/jpg'});
+      response.write(contents);
+      response.end();
+    });
+  }
+
+  else if(request.url==='/images/lamborghini.jpg'){
+		fs.readFile('./images/lamborghini.jpg',function(erros,contents){
+			response.writeHead(200,{'Content-type':'image/jpg'});
+      response.write(contents);
+      response.end();
+		});
+	}
+
+  else if(request.url==='/images/duanwu.jpg'){
+		fs.readFile('./images/duanwu.jpg',function(erros,contents){
+			response.writeHead(200,{'Content-type':'image/jpg'});
+      response.write(contents);
+      response.end();
+		});
+	}
+
+  else if(request.url==='/images/duanwu2.jpg'){
+		fs.readFile('./images/duanwu2.jpg',function(erros,contents){
+			response.writeHead(200,{'Content-type':'image/jpg'});
+      response.write(contents);
+      response.end();
+		});
+	}
+
+  else if(request.url==='/images/siamese_cat.jpg'){
+		fs.readFile('./images/siamese_cat.jpg',function(erros,contents){
+			response.writeHead(200,{'Content-type':'image/jpg'});
+      response.write(contents);
+      response.end();
+		});
+	}
 //route for stylesheets
  else if(request.url==='/stylesheets/cars.css'){
-   fs.readFile('./style')
+   fs.readFile('./stylesheets/cars.css',function(errors,contents){
+     response.writeHead(200,{'Content-type':'text/css'});
+     response.write(contents);
+     response.end();
+   });
  }
+
+ else if(request.usl==='/stylesheet/cats.css'){
+   fs.readFile('./stylesheet/cats.css',function(errors,contents){
+     response.writeHead(200,{'Content-type':'text/css'});
+     response.write(contents);
+     response.end();
+   });
+ }
+
 // request did match anything
     else{
       response.writeHead('404');
