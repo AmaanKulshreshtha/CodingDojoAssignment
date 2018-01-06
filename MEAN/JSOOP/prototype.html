@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>prototype demo</title>
+    <script type="text/javascript">
+
+    const MyObjConstructor = function(name) {
+        const myPrivateVar = "Hello"; // just to show that it is hard to see this private var easily
+        this.name = name; // but you can see the name!
+        this.method = function() {
+          console.log( "I am a method");
+        };
+    }
+
+    MyObjConstructor.prototype.addX = function(){
+      this.name+='X';
+    }
+    const obj1 = new MyObjConstructor('object1');
+    const obj2 = new MyObjConstructor('object2');
+    console.log(obj1.name);
+    obj1.addX();
+    console.log(obj1.name);
+
+// correct way of creating prototype
+    function Cat(catName) {
+      const name = catName;
+      this.getName = function() {
+        return name;
+      };
+    }
+    //adding a method to the cat prototype
+    Cat.prototype.sayHi = function() {
+      console.log('meow');
+    };
+    //adding properties to the cat prototype
+    Cat.prototype.numLegs = 4;
+    const muffin = new Cat('muffin');
+    const biscuit = new Cat('biscuit');
+    console.log(muffin, biscuit);
+    //we access prototype properties the same way as we would access 'own' properties
+    muffin.sayHi();
+    biscuit.sayHi();
+    console.log(muffin.numLegs);
+    muffin.__proto__.numLegs ++; // doing this to muffin will mess up all the cats!
+
+    console.log(biscuit.numLegs);
+
+    // Define the class
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    // Attach class methods using .prototype
+    Person.prototype.greet = function() {
+        console.log("Hello my name is " + this.name + " and I am " + this.age + " years old!");
+        return this;
+    };
+    // Create new instances with the new keyword
+    const amelia = new Person('Amelia', 36);
+    amelia.greet();
+    // Create instance methods by attaching the function directly to an instance
+    amelia.sing = function() {
+        console.log("Lalalala!");
+    };
+    amelia.sing();
+
+    // Private variables are scoped to the constructor with the var keyword
+    function Car(make, model) {
+        let odometer = 0;
+        this.make = make;
+        this.model = model;
+
+        // To make functions private, we scope them to the constructor
+        function updateOdometer(distance) {
+            odometer += distance;
+        };
+
+        // 'Getter' functions help us read private variables
+        this.readOdometer = function() {
+          return odometer;
+        }
+
+        // 'Setter' functions help us update private variables
+        this.drive = function(distance) {
+          updateOdometer(distance);
+          // return this will allow us to chain methods
+          return this;
+        }
+    }
+
+    const myCar = new Car("Honda","Accord");
+
+    myCar.drive(35).drive(10);
+    console.log(myCar.odometer);  // Attempt to access private variable result in undefined
+    console.log(myCar.readOdometer()); // we should always try to use getter 
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

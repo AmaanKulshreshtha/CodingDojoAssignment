@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ninja class 1</title>
+  </head>
+  <script type="text/javascript">
+    function Ninja(_name){
+      var name = _name;
+      var health = 100;
+      let speed = 3;
+      let strength = 3;
+
+      // private getter
+      this.getName=function(){
+        return name;
+      }
+
+      this.getHealth=function(){
+        return health;
+      }
+
+      this.getStrength = function(){
+        return strength;
+      };
+
+      this.getSpeed=function(){
+        return speed;
+      }
+      // private Setter
+      this.setHealth = function(_health){
+        health = _health;
+      }
+    }
+
+    Ninja.prototype.sayName = function(){
+      console.log(this.name);
+      return this;
+    };
+
+    Ninja.prototype.drinkSake = function(){
+      this.health += 10;
+      return this;
+    };
+
+    Ninja.prototype.showStats = function(){
+      console.log(this.getName() + ' has strength= '+ this.getStrength() + ' ' + this.getName() + ' has health= '+ this.health + '\n');
+    };
+
+
+    // add method punch
+    Ninja.prototype.punch = function(ninja){
+        if(ninja instanceof Ninja){
+          ninja.health = ninja.getHealth() - 5;
+          console.log('ninja.health= '+ninja.health);
+          console.log(ninja.getName()+' was punched by '+ this.name +' and loses 5 health! ');
+        }
+        else {
+          throw 'argument is not a Ninja Type!';
+        }
+    }
+
+    // add method kick
+    Ninja.prototype.kick = function(ninja){
+      if(ninja instanceof Ninja){
+        ninja.health = ninja.getHealth() - 15;
+        console.log('ninja.health= '+ninja.health);
+        console.log(ninja.getName()+' was kicked by '+ this.name+' and loses 15 health! ');
+      }
+      else {
+        throw 'argument is not a Ninja Type!';
+      }
+    }
+
+    const blueNinja = new Ninja("Goemon");
+    const redNinja = new Ninja("Bill Gates");
+    redNinja.punch(blueNinja);
+    console.log(blueNinja.health);
+    blueNinja.kick(redNinja);
+    //redNinja.getHealth();
+
+    console.log(redNinja.health);
+    console.log(redNinja.getName());
+    console.log(blueNinja.health);
+
+    blueNinja.showStats();
+
+    var rouge = 0;
+    redNinja.kick(rouge);
+
+  </script>
+  <body>
+
+  </body>
+</html>
