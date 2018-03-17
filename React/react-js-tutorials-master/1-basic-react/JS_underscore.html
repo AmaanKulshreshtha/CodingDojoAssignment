@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> UnderScore Demo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var artists = ['Pharrel Williams', 'Led Zeppelin', 'Rolling Stones'];
+      _.each(artists, function(artist,index,artists){
+        console.log('artist: '+artist);
+      });
+
+      var marvel_Heros = {
+        name:"Tony Stark",
+        alias:"Iron Man"
+      };
+
+      // .each() , 1st p is the target to loop, second is a function
+      //_.each(marvel_Heros, function(value, key){ alert(key+': '+value); });
+
+    //  _.each([1,2,3], alert);
+
+    //  _.each({one: 1, two:2, three:3}, alert);
+
+    //  _.map([1, 2, 3], function(num){ alert (num * 3); });
+
+      var avengers_array = [
+       {name: "Tony Stark", alias: "Iron Man", ability: "flight"},
+       {name: "Bruce Banner", alias: "The Incredible Hulk", ability: "superhuman strength"},
+       {name: "Steve Rogers", alias: "Captain America", ability: "superhuman strength"},
+       {name: "Clint Barton", alias: "Hawkeye", ability: "superior hand-eye coordination"},
+       {name: "Thor Odinson", alias: "Thor", ability: "teleportation"},
+       {name: "Natasha Romanova", alias: "Black Widow", ability: "espionage"}
+      ];
+      // map is commonly used to iterate and manipulate item in object like array
+     var AvengerAssemble = _.map(avengers_array, function(avenger){ return avenger; });
+     console.log(AvengerAssemble);
+     //pluck is used commonly to extract certain property from object like list
+     var AvengerNames = _.pluck(avengers_array, 'name');
+     console.log(AvengerNames);
+      // where return array of all values that contain all key-value pair in properties
+     var superhumanStrengthArray = _.where(avengers_array, {ability: 'superhuman strength'});
+     console.log(superhumanStrengthArray);
+     // .findwhere return the first value that contain / match all key-value pair property
+     var superhumanStrengthAvenger = _.findWhere(avengers_array, {ability: 'superhuman strength'});
+     console.log(superhumanStrengthAvenger);
+
+     //.sortBy sort the target commonly like array based on the 2nd parameter--property
+     var sortedAvengerNames = _.sortBy(avengers_array, 'alias');
+     console.log(sortedAvengerNames);
+     // refer to the first item in array
+     var firstAvenger =_.first(avengers_array);
+     console.log(firstAvenger);
+     // refer to the last item in array
+     var lastAvenger = _.last(avengers_array, 2);
+     console.log(lastAvenger);
+
+     // defaults
+     var iceCream = {flavor: "chocolate"};
+     _.defaults(iceCream, {flavor: "vanilla", sprinkles: "lots"});
+
+    </script>
+  </body>
+</html>

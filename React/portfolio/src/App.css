@@ -1,0 +1,83 @@
+.main-header{
+  background: url(./images/header-image.jpg) #3f7e37 no-repeat top;
+  background-size: auto 725px;
+  height: 725px;
+  overflow: hidden;
+  display: block;
+}
+
+.hamburger {
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  color: #000;
+  cursor: pointer;
+}
+
+.container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1300px;
+}
+
+/* style for that little bar on left of menu*/
+.fa{
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.main-nav {
+  margin: 60px 0 0;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.main-nav a{
+  padding: 0 20px;
+  font-size: 1.7em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color:#fff;
+  outline:none!important;
+  outline-color: initial;
+  outline-style: none;
+  outline-width: initial;
+}
+
+.main-nav li{
+  display: inline-block;
+  line-height: 59px;
+}
+
+a {
+  background-color: transparent;
+}
+
+.title-tagline-wrapper {
+  margin: 0 auto;
+  margin-top: 165px;
+  padding-left: .9375rem;
+  padding-right: .9375rem;
+  max-width: 800px;
+  color: #fff;
+  text-align: center;
+}
+
+.title-tagline-wrapper > h1{
+  font-weight: bolder;
+}
+
+.title-tagline-wrapper > h2{
+  font-weight: bolder;
+}
